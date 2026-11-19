@@ -1,0 +1,1005 @@
+/* ============================================
+   DYEZ — Estilos
+   ============================================ */
+
+/* ----- Variables ----- */
+:root {
+    --bg-dark: #050505;
+    --bg-light: #f2f2ed;
+    --text-dark: #f2f2ed;
+    --text-light: #050505;
+    --text-muted-dark: #a0a0a0;
+    --text-muted-light: #555555;
+    
+    --accent: #00ff00;
+    --border-dark: #222222;
+    --border-light: #d1d1cc;
+
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --max-width: 1200px;
+}
+
+/* ----- Reset ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* ----- Utilidades ----- */
+.bg-dark { background-color: var(--bg-dark); color: var(--text-dark); }
+.bg-light { background-color: var(--bg-light); color: var(--text-light); }
+.text-green { color: var(--accent); }
+.text-muted { color: var(--text-muted-dark); }
+.text-muted-dark { color: var(--text-muted-light); }
+
+/* ----- Tipografías ----- */
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+}
+
+.eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ----- Botones Globales ----- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #000;
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-dark);
+}
+
+.btn-full {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    z-index: 100;
+    background-color: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--accent);
+}
+
+/* Botón volver en el header (página de proyecto) */
+.btn-volver-header {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-volver-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent) !important;
+}
+
+/* ============================================
+   HERO (LANDING)
+   ============================================ */
+.hero {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 10rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+
+.hero .btn {
+    cursor: pointer;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(4rem, 10vw, 11rem);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.hero-desc {
+    max-width: 450px;
+    font-size: 1.1rem;
+    color: var(--text-muted-dark);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Formas abstractas */
+.hero-shapes {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.shape {
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    flex: 1;
+    height: 150px;
+}
+
+.shape-1 { transform: rotate(45deg); background: #111; }
+.shape-2 { border-color: var(--accent); background: rgba(0, 255, 0, 0.05); box-shadow: 0 0 40px rgba(0,255,0,0.1); }
+.shape-3 { background: #111; }
+.shape-4 { background: #111; }
+
+/* ============================================
+   CURSOR INTERACTIVO (HERO)
+   ============================================ */
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease;
+}
+
+/* ============================================
+   MANIFIESTO
+   ============================================ */
+.manifesto {
+    padding: 8rem 4rem;
+}
+
+.manifesto-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.title-dark {
+    color: var(--text-light);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    margin-top: 1rem;
+}
+
+.green-line {
+    width: 150px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 2rem;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.title-dark-small {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.manifesto-list {
+    list-style: none;
+}
+
+.manifesto-list li {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--text-light);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.manifesto-callout {
+    max-width: var(--max-width);
+    margin: 6rem auto 0 auto;
+    padding: 4rem;
+    border-radius: 30px;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manifesto-callout:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.15);
+}
+
+.manifesto-callout p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted-dark);
+}
+
+.manifesto-callout h2 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    margin-top: 1rem;
+    color: var(--accent);
+    line-height: 1.1;
+    word-wrap: break-word;
+}
+
+/* ============================================
+   PROCESO
+   ============================================ */
+.proceso {
+    padding: 8rem 4rem;
+}
+
+.section-header {
+    max-width: var(--max-width);
+    margin: 0 auto 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    max-width: 60%;
+}
+
+.section-header p {
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+.proceso-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proceso-item {
+    width: 100%;
+    border: 1px solid var(--border-dark);
+    border-radius: 50px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #0a0a0a;
+    transition: border-color 0.3s ease;
+}
+
+.proceso-item:hover {
+    border-color: var(--accent);
+}
+
+.proceso-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+.proceso-text h3 {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    text-transform: none;
+    margin-bottom: 0.2rem;
+}
+
+.proceso-text p {
+    color: var(--text-muted-dark);
+    font-size: 0.9rem;
+}
+
+.proceso-connector {
+    width: 2px;
+    height: 40px;
+    background-color: var(--accent);
+    opacity: 0.5;
+}
+
+/* ============================================
+   PROYECTOS (LANDING)
+   ============================================ */
+.proyectos {
+    padding: 8rem 4rem;
+}
+
+.header-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header-wrapper .eyebrow {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.header-wrapper .section-title {
+    margin-bottom: 4rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+.grid-proyectos {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjetas clickeables */
+.card-proyecto {
+    background-color: #0a0a0a;
+    border: 1px solid var(--border-dark);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 400px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-proyecto:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.2);
+}
+
+.card-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.card-proyecto h3 {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    transition: color 0.4s ease;
+}
+
+.card-proyecto .categoria {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    transition: color 0.4s ease;
+}
+
+.card-proyecto .descripcion {
+    color: var(--text-muted-dark);
+    font-size: 0.9rem;
+    transition: color 0.4s ease;
+}
+
+.card-proyecto:hover h3,
+.card-proyecto:hover .categoria,
+.card-proyecto:hover .descripcion {
+    color: #000000;
+}
+
+/* ============================================
+   LOGOS EN LAS TARJETAS DE PROYECTOS
+   ============================================ */
+.card-logo-wrapper {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.card-logo {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+    filter: none; /* Logo blanco por defecto */
+}
+
+.card-proyecto:hover .card-logo {
+    filter: invert(1); /* Logo negro al pasar el mouse */
+}
+
+/* ============================================
+   SERVICIOS
+   ============================================ */
+.servicios {
+    padding: 8rem 4rem;
+}
+
+.section-header-light {
+    max-width: var(--max-width);
+    margin: 0 auto 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.section-header-light h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    max-width: 60%;
+}
+
+.section-header-light p {
+    max-width: 350px;
+    font-size: 0.95rem;
+}
+
+.grid-servicios {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card-servicio {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.1);
+}
+
+.card-servicio h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.05;
+}
+
+.card-servicio p {
+    color: var(--text-muted-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   SOBRE DYEZ
+   ============================================ */
+.sobre {
+    padding: 8rem 4rem;
+}
+
+.sobre-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sobre-text {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: var(--text-muted-dark);
+}
+
+.sobre-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.1;
+}
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+.contacto {
+    padding: 8rem 4rem;
+}
+
+.contacto-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contacto-left h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 2rem;
+}
+
+.contacto-right {
+    padding: 3rem;
+    border-radius: 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+    padding: 4rem;
+}
+
+.footer-top {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-dark);
+    padding-bottom: 3rem;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-muted-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    max-width: var(--max-width);
+    margin: 3rem auto 0 auto;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted-dark);
+    letter-spacing: 0.1em;
+}
+
+/* ============================================
+   PÁGINA DE PROYECTO INDIVIDUAL
+   ============================================ */
+.proyecto-page {
+    padding: 10rem 4rem 4rem 4rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.proyecto-subtitulo {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}
+
+/* ENCABEZADO MINIMALISTA (Logo) */
+.header-proyecto-minimalista {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.logo-proyecto-grande {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    filter: none; /* Si necesitás invertirlo, usá invert(1) */
+}
+
+/* CONTENEDOR DE IMAGEN CON MÁRGENES Y ANIMACIÓN */
+.contenedor-imagen-ajustada {
+    width: 80%; 
+    max-width: 1000px; 
+    margin: 0 auto 8rem auto; 
+    background-color: #000;
+    border-radius: 20px;
+    border: 1px solid var(--border-dark);
+    overflow: hidden; /* Esto es clave para que el zoom no se salga del borde redondeado */
+    display: flex;
+    justify-content: center;
+    
+    /* 👇 TRANSICIÓN PARA LA ANIMACIÓN */
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 👇 EFECTO AL PASAR EL MOUSE POR EL CONTENEDOR */
+.contenedor-imagen-ajustada:hover {
+    border-color: var(--accent); /* El borde se vuelve verde */
+    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.15); /* Brillo verde sutil */
+    transform: translateY(-5px); /* Se eleva un poquito */
+}
+
+.contenedor-imagen-ajustada img {
+    width: 100%;
+    max-height: 70vh; 
+    object-fit: contain; 
+    display: block;
+    
+    /* 👇 TRANSICIÓN PARA LA IMAGEN */
+    transition: transform 0.5s ease;
+}
+
+/* 👇 EFECTO ZOOM EN LA IMAGEN */
+.contenedor-imagen-ajustada:hover img {
+    transform: scale(1.03); /* Aumenta un 3% su tamaño */
+}
+
+/* TEXTOS CON AIRE */
+.proyecto-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+.info-columna p {
+    color: var(--text-muted-dark);
+    font-size: 1.05rem;
+    margin-top: 1rem;
+}
+
+.proyecto-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.proyecto-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid var(--border-dark);
+}
+
+/* ============================================
+   BARRA DE NAVEGACIÓN INFERIOR (ESTILO PÍLDORA)
+   ============================================ */
+.barra-navegacion-pildora {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem;
+    border-top: 1px solid var(--border-dark);
+}
+
+.btn-pildora {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent);
+    color: #000;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 3px solid #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+.btn-pildora:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 0 #000;
+}
+
+.btn-pildora:active {
+    transform: translateY(0);
+    box-shadow: 0 0 0 #000;
+}
+
+.puntitos-nav {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+.punto.activo {
+    background-color: #666;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .site-header, .hero, .manifesto, .proceso, .proyectos, .servicios, .sobre, .contacto, .site-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .site-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav { display: none; }
+    
+    .hero-top, .hero-bottom, .section-header, .section-header-light {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .hero-title { font-size: 5rem; }
+    
+    .manifesto-grid, .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .manifesto-list li { font-size: 2rem; }
+    .manifesto-callout { padding: 2rem; }
+    
+    .section-header h2, .section-header-light h2 { max-width: 100%; }
+    
+    .header-wrapper .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-top { flex-direction: column; gap: 2rem; }
+    .footer-links { align-items: flex-start; }
+
+    #custom-cursor {
+        display: none !important;
+    }
+    
+    .hero {
+        cursor: auto;
+    }
+
+    /* Ajustes página proyecto individual */
+    .proyecto-page {
+        padding: 8rem 1.5rem 2rem 1.5rem;
+    }
+    
+    .proyecto-info, .proyecto-galeria {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .barra-navegacion-pildora {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .btn-pildora {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustes específicos de la página DESET en celular */
+    .contenedor-imagen-ajustada {
+        width: 100%; /* En celular ocupa todo el ancho */
+        margin-bottom: 4rem;
+    }
+
+    .logo-proyecto-grande {
+        max-width: 200px;
+    }
+}

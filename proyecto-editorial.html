@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYEZ - Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon-2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark">
+
+    <!-- Header simplificado con botón Volver -->
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="index.html" class="logo-img-link">
+                <img src="favicon.png" alt="DYEZ Logo" class="header-logo">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="btn-volver">← Volver al inicio</a>
+        </nav>
+    </header>
+
+    <!-- Contenido del proyecto -->
+    <main class="proyecto-page">
+        
+        <!-- Título del Proyecto -->
+        <div class="header-wrapper">
+            <p class="eyebrow text-green">IDENTIDAD VISUAL</p>
+            <h1 class="hero-title" style="font-size: clamp(4rem, 8vw, 8rem);">DYEZ</h1>
+            <p class="proyecto-subtitulo text-muted">Sistema visual construido para comunicar postura, ritmo y reconocimiento.</p>
+        </div>
+
+        <!-- Imagen principal (Reemplazá el src por la tuya) -->
+        <div class="proyecto-imagen-principal">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop" alt="Imagen del proyecto DYEZ">
+        </div>
+
+        <!-- Detalles / Texto -->
+        <div class="proyecto-info">
+            <div class="info-columna">
+                <h3 class="text-green eyebrow">EL DESAFÍO</h3>
+                <p>Explicá acá de qué se trataba el proyecto, qué necesitaba el cliente y cuál era el objetivo principal.</p>
+            </div>
+            <div class="info-columna">
+                <h3 class="text-green eyebrow">LA SOLUCIÓN</h3>
+                <p>Contá cómo resolviste el desafío, qué conceptos usaste y cómo se aplicó el sistema visual.</p>
+            </div>
+        </div>
+
+        <!-- Galería de imágenes (Podés agregar todas las que quieras) -->
+        <div class="proyecto-galeria">
+            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop" alt="Detalle 1">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Detalle 2">
+        </div>
+
+    </main>
+
+    <!-- 👇 NAVEGACIÓN ENTRE PROYECTOS 👇 -->
+    <nav class="proyecto-navegacion">
+        <!-- Como este es el primero, el "anterior" apunta al último proyecto -->
+        <a href="proyecto-packaging.html" class="nav-siguiente">
+            <span class="nav-label">← PROYECTO ANTERIOR</span>
+            <h3>Packaging</h3>
+        </a>
+        
+        <!-- Como este es el primero, el "siguiente" apunta al segundo proyecto -->
+        <a href="proyecto-deset.html" class="nav-siguiente" style="text-align: right;">
+            <span class="nav-label">SIGUIENTE PROYECTO →</span>
+            <h3>DESET</h3>
+        </a>
+    </nav>
+
+</body>
+</html>
