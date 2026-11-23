@@ -44,6 +44,7 @@ body {
 /* ----- Utilidades ----- */
 .bg-dark { background-color: var(--bg-dark); color: var(--text-dark); }
 .bg-light { background-color: var(--bg-light); color: var(--text-light); }
+.bg-black { background-color: #000; color: var(--text-dark); } /* 👈 AGREGADO POR SI FALTABA */
 .text-green { color: var(--accent); }
 .text-muted { color: var(--text-muted-dark); }
 .text-muted-dark { color: var(--text-muted-light); }
@@ -660,7 +661,10 @@ h1, h2, h3 {
     margin-bottom: 2rem;
 }
 
+/* AQUÍ ESTÁ EL CONTENEDOR NEGRO QUE NO SE ESTABA APLICANDO */
 .contacto-right {
+    background-color: var(--bg-dark); /* Fondo negro */
+    color: var(--text-dark);
     padding: 3rem;
     border-radius: 24px;
 }
@@ -712,10 +716,11 @@ h1, h2, h3 {
 .contacto-toggle {
     display: flex;
     gap: 1rem;
-    background-color: #e5e5df;
+    background-color: #e5e5df; /* Fondo gris clarito detrás de los botones */
     padding: 0.5rem;
     border-radius: 50px;
     width: fit-content;
+    margin-top: 1rem;
 }
 
 .btn-toggle {
@@ -736,8 +741,8 @@ h1, h2, h3 {
 }
 
 .btn-toggle.active {
-    background-color: var(--text-light);
-    color: var(--text-dark);
+    background-color: var(--text-light); /* Fondo negro cuando está activo */
+    color: var(--text-dark);              /* Texto blanco */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
