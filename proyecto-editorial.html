@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DYEZ - Proyecto</title>
+    <title>Diseño Editorial — Proyecto</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon-2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 </head>
 <body class="bg-dark">
 
-    <!-- Header simplificado con botón Volver -->
+    <!-- Header -->
     <header class="site-header">
         <div class="logo-container">
             <a href="index.html" class="logo-img-link">
@@ -20,58 +20,63 @@
             </a>
         </div>
         <nav class="nav">
-            <a href="index.html" class="btn-volver">← Volver al inicio</a>
+            <a href="index.html#proyectos" class="btn-volver-header">← Volver al inicio</a>
         </nav>
     </header>
 
     <!-- Contenido del proyecto -->
     <main class="proyecto-page">
         
-        <!-- Título del Proyecto -->
-        <div class="header-wrapper">
-            <p class="eyebrow text-green">IDENTIDAD VISUAL</p>
-            <h1 class="hero-title" style="font-size: clamp(4rem, 8vw, 8rem);">DYEZ</h1>
-            <p class="proyecto-subtitulo text-muted">Sistema visual construido para comunicar postura, ritmo y reconocimiento.</p>
+        <!-- Encabezado con el Logo -->
+        <div class="header-proyecto-minimalista">
+            <!-- Asegurate de que la extensión sea la correcta (.png, .jpg, .svg) -->
+            <img src="editorial-logo.png" alt="Logo Diseño Editorial" class="logo-proyecto-grande" style="max-width: 250px;">
         </div>
 
-        <!-- Imagen principal (Reemplazá el src por la tuya) -->
-        <div class="proyecto-imagen-principal">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop" alt="Imagen del proyecto DYEZ">
-        </div>
-
-        <!-- Detalles / Texto -->
+        <!-- Textos del Caso de Estudio -->
         <div class="proyecto-info">
             <div class="info-columna">
-                <h3 class="text-green eyebrow">EL DESAFÍO</h3>
-                <p>Explicá acá de qué se trataba el proyecto, qué necesitaba el cliente y cuál era el objetivo principal.</p>
+                <h3 class="text-green eyebrow">EL CONCEPTO</h3>
+                <p>El proyecto parte de la idea de crear un newsletter escolar que recopile y comunique diferentes acontecimientos, novedades y actividades de la institución, construyendo una mirada interna sobre lo que sucede en la escuela. Se busca darle un carácter periodístico a la información, convirtiendo hechos cotidianos en contenido editorial y generando una publicación que refleje la identidad de la comunidad educativa.</p>
             </div>
             <div class="info-columna">
                 <h3 class="text-green eyebrow">LA SOLUCIÓN</h3>
-                <p>Contá cómo resolviste el desafío, qué conceptos usaste y cómo se aplicó el sistema visual.</p>
+                <p>La propuesta se resuelve a través de una composición editorial que explora la distribución de textos en columnas, trabajando con distintas jerarquías tipográficas, tamaños de titulares y bloques de información. Se utiliza una retícula flexible que permite organizar el contenido y combinar texto e imágenes de manera dinámica, generando diferentes ritmos de lectura. El contraste entre tipografías, los destacados y los recursos gráficos ayudan a ordenar la información y darle identidad visual a la publicación, poniendo en práctica los principios del diseño editorial.</p>
             </div>
         </div>
 
-        <!-- Galería de imágenes (Podés agregar todas las que quieras) -->
-        <div class="proyecto-galeria">
-            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1000&auto=format&fit=crop" alt="Detalle 1">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Detalle 2">
+        <!-- Imagen 1 (Portada o Apertura) -->
+        <div class="contenedor-imagen-ajustada">
+            <!-- Reemplazá "editorial-portada.jpg" por el nombre de tu imagen -->
+            <img src="Editorial.png" alt="Portada del proyecto Diseño Editorial">
         </div>
+
+        <!-- Imagen 2 (Detalle de páginas interiores) -->
+        
 
     </main>
 
-    <!-- 👇 NAVEGACIÓN ENTRE PROYECTOS 👇 -->
-    <nav class="proyecto-navegacion">
-        <!-- Como este es el primero, el "anterior" apunta al último proyecto -->
-        <a href="proyecto-packaging.html" class="nav-siguiente">
-            <span class="nav-label">← PROYECTO ANTERIOR</span>
-            <h3>Packaging</h3>
-        </a>
+    <!-- Barra de Navegación Inferior -->
+    <nav class="barra-navegacion-pildora">
         
-        <!-- Como este es el primero, el "siguiente" apunta al segundo proyecto -->
-        <a href="proyecto-deset.html" class="nav-siguiente" style="text-align: right;">
-            <span class="nav-label">SIGUIENTE PROYECTO →</span>
-            <h3>DESET</h3>
+        <!-- El anterior es Perfume -->
+        <a href="proyecto-perfume.html" class="btn-pildora">
+            ← Trabajo Anterior
         </a>
+
+        <div class="puntitos-nav">
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto activo"></span> <!-- Activo porque es el 5to y último -->
+        </div>
+
+        <!-- El siguiente es DYEZ (para volver a empezar) -->
+        <a href="proyecto-dyez.html" class="btn-pildora">
+            Siguiente Trabajo →
+        </a>
+
     </nav>
 
 </body>
